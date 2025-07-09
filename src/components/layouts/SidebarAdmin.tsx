@@ -7,6 +7,7 @@ import { BsBox } from 'react-icons/bs'
 import { FaUsers } from 'react-icons/fa'
 import { RiFolderUserLine } from 'react-icons/ri'
 import SidebarItem from '../elements/SidebarItem'
+import { TbBrandAirtable } from 'react-icons/tb'
 
 interface ISidebarItem {
     id: string | number,
@@ -48,6 +49,12 @@ const listLink: Array<ISidebarItem> = [
     },
     {
         id: 6,
+        title: "Brand",
+        icon: <TbBrandAirtable className='text-lg' />,
+        href: '/brands'
+    },
+    {
+        id: 7,
         title: "Categories",
         icon: <BiCategory className='text-lg' />,
         href: '/categories'

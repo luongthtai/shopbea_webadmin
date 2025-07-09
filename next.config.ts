@@ -1,9 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // experimental: {
-  //   ppr: 'incremental',
-  // },
+  images: {
+    remotePatterns: [{
+      protocol: 'http',
+      hostname: '192.168.1.3',
+      pathname: '**'
+    }]
+  }
 };
 
 export default nextConfig;

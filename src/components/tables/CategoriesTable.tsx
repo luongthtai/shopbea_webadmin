@@ -53,7 +53,7 @@ const RowCategoryItem = ({ id, index, name, image, description, createdAt }: Cat
             <td className='px-5 py-2 text-grey-Grey-1'>{index}</td>
             <td className='px-5 py-2'>
                 <div className='flex items-center gap-2.5'>
-                    <Image src={`${URL_SERVER_IMAGE}${image}`} alt='category avatar' className='w-10 h-10 rounded-4 object-cover block' />
+                    <Image src={`${URL_SERVER_IMAGE}${image}`} alt='category avatar' width={40} height={40} className='w-10 h-10 rounded-4 object-cover block' />
                     <p className='capitalize'>{name}</p>
                 </div>
             </td>

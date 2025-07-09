@@ -1,7 +1,7 @@
 import axios, { AxiosError, AxiosResponse, InternalAxiosRequestConfig } from "axios"
 
 export const URL_SERVER = 'http://192.168.1.3:8080/api/v1/'
-export const URL_SERVER_IMAGE = 'http://192.168.1.3:8080/public/'
+export const URL_SERVER_IMAGE = 'http://192.168.1.3:8080/'
 
 const instance = axios.create({
     baseURL: URL_SERVER,
