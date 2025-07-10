@@ -5,24 +5,30 @@ import { useState } from 'react'
 import { MdCancel } from 'react-icons/md'
 import ButtonDanger from '../elements/ButtonDanger'
 import ButtonPrimary from '../elements/ButtonPrimary'
+import InputImage from '../elements/InputImage'
+import InputLabel from '../elements/InputLabel'
 import TitleSection from '../elements/TitleSection'
 import Popup from './Popup'
-import InputLabel from '../elements/InputLabel'
-import InputImage from '../elements/InputImage'
 
 interface IInitialValue {
     image: File | string,
-    brand_name: string,
-    time_start: string,
-    time_end: string,
+    product_name: string,
+    product_price: string,
+    product_description: string,
+    status: boolean,
+    category_id: string,
+    brand_id: string,
     brand_description: string
 }
 
 const initialValues: IInitialValue = {
     image: "",
-    brand_name: "",
-    time_start: "",
-    time_end: "",
+    product_name: "",
+    product_price: "",
+    product_description: "",
+    category_id: "",
+    brand_id: "",
+    status: true,
     brand_description: "",
 }
 

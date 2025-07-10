@@ -29,6 +29,7 @@ export default function BrandsTable({ brands }: Props) {
                         id={item._id}
                         index={index + 1}
                         name={item.name}
+                        email={item.email}
                         image={item.avatar}
                         description={item.brand_description}
                         rating={item.rating}
@@ -46,6 +47,7 @@ type BrandProps = {
     id: string,
     index: number,
     name: string,
+    email: string,
     image: string,
     description: string,
     rating: string,
@@ -55,14 +57,17 @@ type BrandProps = {
     isActive: boolean
 }
 
-const RowBrandItem = ({ id, index, name, image, description, rating, timeStart, timeEnd, createdAt, isActive }: BrandProps) => {
+const RowBrandItem = ({ id, index, name, image, description, rating, timeStart, timeEnd, createdAt, isActive, email }: BrandProps) => {
     return (
         <tr className='border-b border-grey-Grey-2 text-sm'>
             <td className='px-5 py-2 text-grey-Grey-1'>{index}</td>
             <td className='px-5 py-2'>
                 <div className='flex items-center gap-2.5'>
                     <Image src={`${URL_SERVER_IMAGE}${image}`} alt='category avatar' width={40} height={40} className='w-10 h-10 rounded-4 object-cover block' />
-                    <p className='capitalize'>{name}</p>
+                    <div>
+                        <p className='capitalize text-sm text-black-Black-1'>{name}</p>
+                        <p className='capitalize text-xs text-primary-Green-1'>{email}</p>
+                    </div>
                 </div>
             </td>
             <td className='px-5 py-2 text-center text-grey-Grey-1'>{description}</td>

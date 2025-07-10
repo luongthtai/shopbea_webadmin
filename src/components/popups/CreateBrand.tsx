@@ -56,6 +56,7 @@ export default function CreateBrand() {
             const status = res.status
             if (status) {
                 queryClient.invalidateQueries({ queryKey: ['brands'] })
+                formik.resetForm()
                 notify()
                 handleShowPopup()
             }
@@ -80,18 +81,17 @@ export default function CreateBrand() {
         onSubmit: values => {
             const formData = new FormData()
 
-            // formData.append("image", values.image)
-            // formData.append("brand_name", values.brand_name)
-            // formData.append("brand_email", values.brand_email)
-            // formData.append("brand_password", values.brand_password)
-            // formData.append("mobile", values.mobile)
-            // formData.append("address", values.address)
-            // formData.append("time_start", values.time_start)
-            // formData.append("time_end", values.time_end)
-            // formData.append("brand_description", values.brand_description)
+            formData.append("image", values.image)
+            formData.append("brand_name", values.brand_name)
+            formData.append("brand_email", values.brand_email)
+            formData.append("brand_password", values.brand_password)
+            formData.append("mobile", values.mobile)
+            formData.append("address", values.address)
+            formData.append("time_start", values.time_start)
+            formData.append("time_end", values.time_end)
+            formData.append("brand_description", values.brand_description)
 
-            // mutation.mutate(formData)
-            console.log(values)
+            mutation.mutate(formData)
         }
     })
 
